@@ -25,7 +25,7 @@
 <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
 
 <script>
-$('#categorias',).DataTable({
+$('#clientes',).DataTable({
     responsive: true,
     autoWidth: false,
     "language": {

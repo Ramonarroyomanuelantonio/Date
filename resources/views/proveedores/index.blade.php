@@ -58,9 +58,9 @@ $('#proveedores',).DataTable({
             <br><br>
             <h3>Proveedores</h3>
             <br>
-            <form action="{{route('proveedores.create')}}">
-                <button class="btn btn-primary">Nuevo+</button>
-            </form>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create">
+                Nuevo +
+            </button>
             <br>
             <br>
             <div class="card">
@@ -107,9 +107,11 @@ $('#proveedores',).DataTable({
                                 @include('proveedores.info')
                             @endforeach
                         </tbody>
+
                     </table>
                 </div>
             </div>
+            @include('proveedores.create')
         </div>
         <div class="col"></div>
     </div>

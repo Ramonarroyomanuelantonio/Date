@@ -25,6 +25,11 @@
                         placeholder="Stock">
                 </div>
                 <div class="mb-3">
+                    <label for="" class="form-label">Precio</label>
+                    <input type="number" step="0.01" class="form-control" name="price" id="price" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+                <div class="mb-3">
                     <label for="imagen" class="form-label">Imagen</label>
                     <input type="file" class="form-control" name="imagen" id="imagen" aria-describedby="helpId" accept="image/*">
                     <small id="helpId" class="form-text text-muted">Selecciona una imagen.</small>

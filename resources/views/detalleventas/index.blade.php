@@ -25,7 +25,7 @@
 <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
 
 <script>
-$('#categorias',).DataTable({
+$('#detalleventas',).DataTable({
     responsive: true,
     autoWidth: false,
     "language": {
@@ -45,7 +45,7 @@ $('#categorias',).DataTable({
 </script>
 @stop
 
-@section('content') 
+@section('content')
     <div class="row justify-content-center align-items-center g-2">
         @if (session('success'))
             <h6 class="alert alert-success">{{ session('success') }}</h6>

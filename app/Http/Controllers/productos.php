@@ -36,13 +36,14 @@ class productos extends Controller
         $producto->codigo= $request->input('codigo');
         $producto->nombre= $request->input('nombre');
         $producto->stock= $request->input('stock');
+        $producto->price= $request->input('price');
         $producto->category_id= $request->input('category_id');
         if($request->hasFile('imagen')){
             $file = $request->file('imagen');
             $destinationPath = 'IMG';
             $filename = time() . '-'.$file->getClientOriginalName();
             $uploadSuccess = $request->file('imagen')->move($destinationPath, $filename);
-            $producto->imagen = $destinationPath . $filename;
+            $producto->imagen = $filename;
 
         }
         $producto->save();

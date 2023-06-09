@@ -25,7 +25,7 @@
 <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
 
 <script>
-$('#categorias',).DataTable({
+$('#productos',).DataTable({
     responsive: true,
     autoWidth: false,
     "language": {
@@ -77,6 +77,7 @@ $('#categorias',).DataTable({
                             <th scope="col">Nombre</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Imagen</th>
+                            <th scope="col">Precio</th>
                             <th >Acciones</th>
                         </tr>
                     </thead>
@@ -88,7 +89,8 @@ $('#categorias',).DataTable({
                                 <td>{{ $producto->codigo }}</td>
                                 <td>{{ $producto->nombre }}</td>
                                 <td>{{ $producto->stock }}</td>
-                                <td><img src="{{ asset($producto->imagen) }}" alt="" class="img-fluid img-thumbnail" width="120px"></td>
+                                <td><img src="{{ asset('IMG/'.$producto->imagen) }}" alt="" class="img-fluid img-thumbnail" width="120px"></td>
+                                <td>{{ $producto->price }}</td>
                                 <td>
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal"
                                         data-bs-target="#edit{{ $producto->id }}">

@@ -26,6 +26,11 @@
                         placeholder="" value="{{$producto->stock}}">
                 </div>
                 <div class="mb-3">
+                    <label for="" class="form-label">Precio</label>
+                    <input type="text" class="form-control" name="stock" id="stock" aria-describedby="helpId"
+                        placeholder="" value="{{$producto->precio}}">
+                </div>
+                <div class="mb-3">
                     <label for="" class="form-label">Imagen</label>
                     <input type="text" class="form-control" name="imagen" id="imagen" aria-describedby="helpId"
                         placeholder="" value="{{$producto->imagen}}">

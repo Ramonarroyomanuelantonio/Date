@@ -14,10 +14,10 @@ class detalleventas extends Controller
      */
     public function index()
     {
-        $detalleventas=detalleventa::all();
-        $cliente=cliente::all();
-        $producto=producto::all();
-        return view('detalleventas.index', ['detalleventas'=>$detalleventas, 'clientes'=>$cliente, 'productos'=>$producto]);
+        $detalleventas = detalleventa::all();
+        $cliente = cliente::all();
+        $producto = producto::all();
+        return view('detalleventas.index', ['detalleventas' => $detalleventas, 'clientes' => $cliente, 'productos' => $producto]);
     }
 
     /**
@@ -34,15 +34,23 @@ class detalleventas extends Controller
      */
     public function store(Request $request)
     {
-        $detalleventas =new detalleventa();
-        $detalleventas->cliente_id=$request->input('cliente_id');
-        $detalleventas->producto_id=$request->input('producto_id');
-        $detalleventas->cantidad=$request->input('cantidad');
-        $detalleventas->precioventa=$request->input('precioventa');
-        $detalleventas->save();
+        $detalleventas = new detalleventa();
+        $detalleventas->cliente_id = $request->input('cliente_id');
+        $detalleventas->producto_id = $request->input('producto_id');
+        $detalleventas->cantidad = $request->input('cantidad');
+        $detalleventas->precioventa = $request->input('precioventa');
 
-        $producto=$detalleventas->producto;
-        $nuevotock=$producto->stock - $detalleventas->cantidad;
+        // $producto = Producto::find($request->input('producto_id'));
+        // if ($producto) {
+        //     // Asignar el valor del campo precio al campo cantidad
+        //     $detalleventas->precioventa = $producto->price;
+        // }
+
+        $detalleventas->save;
+
+
+        $producto = $detalleventas->producto;
+        $nuevotock = $producto->stock - $detalleventas->cantidad;
         $producto->stock = $nuevotock;
         $producto->save();
 
@@ -71,10 +79,10 @@ class detalleventas extends Controller
     public function update(Request $request, string $id)
     {
         $detalleventas = detalleventa::find($id);
-        $detalleventas->cliente_id=$request->input('cliente_id');
-        $detalleventas->producto_id=$request->input('producto_id');
-        $detalleventas->cantidad=$request->input('cantidad');
-        $detalleventas->precioventa=$request->input('precioventa');
+        $detalleventas->cliente_id = $request->input('cliente_id');
+        $detalleventas->producto_id = $request->input('producto_id');
+        $detalleventas->cantidad = $request->input('cantidad');
+        $detalleventas->precioventa = $request->input('precioventa');
         $detalleventas->update();
 
         return redirect()->back()->with('success', 'Venta generada correctamente');
@@ -85,7 +93,7 @@ class detalleventas extends Controller
      */
     public function destroy(string $id)
     {
-        $detalleventas= detalleventa::find($id);
+        $detalleventas = detalleventa::find($id);
         $detalleventas->delete();
         return redirect()->back()->with('success', 'Venta Eliminada');
     }

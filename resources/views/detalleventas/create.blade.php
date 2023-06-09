@@ -32,8 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Precio de Venta</label>
-                    <input type="text" class="form-control" name="precioventa" id="precioventa" aria-describedby="helpId"
-                        placeholder="Precio de Venta">
+                    <input type="text" class="form-control" name="precioventa" id="precioventa" aria-describedby="helpId" placeholder="Precio de Venta">
                 </div>
             </div>
             <div class="modal-footer">
