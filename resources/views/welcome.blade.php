@@ -54,9 +54,6 @@
                     <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
                     <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
                     <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-                    <li><a class="nav-link   scrollto" href="#portfolio">Productos</a></li>
-
-                    <li><a class="nav-link scrollto" href="#contact">Contactanos</a></li>
                     <li><a class="getstarted scrollto" href="{{ route('login') }}">Iniciar Sesión</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -288,7 +285,7 @@
             </div>
         </section><!-- End Cta Section -->
 
-        <!-- ======= Portfolio Section ======= -->
+        <!--
         <section id="portfolio" class="portfolio">
             <div class="container" data-aos="fade-up">
 
@@ -384,15 +381,15 @@
                 </div>
 
             </div>
-        </section><!-- End Portfolio Section -->
+        </section>
 
-        <!-- ======= Contact Section ======= -->
+
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>Contactanos</h2>
-                    <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
                 <div class="row">
@@ -459,7 +456,7 @@
                 </div>
 
             </div>
-        </section><!-- End Contact Section -->
+        </section><-->
 
     </main><!-- End #main -->
 
@@ -487,8 +484,6 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Productos</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Contactanos</a></li>
                         </ul>
                     </div>
 

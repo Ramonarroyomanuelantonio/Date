@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'JC Medical',
+    'title' => 'JC Medical', 
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -313,7 +313,7 @@ return [
         ],
         [
             'text'        => 'Perfil',
-            'url'         => 'admin/pages',
+            'url'         => 'dashboard',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
@@ -321,16 +321,16 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'dashboard',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'url'  => 'dashboard',
             'icon' => 'fas fa-fw fa-lock',
         ],
 
-        ['header' => 'OPCIONES'],
+        ['header' => 'MODULOS'],
 
         [
             'text'    => 'GESTION',
@@ -349,8 +349,8 @@ return [
                             'route'  => 'categorias.index',
                         ],
                         [
-                            'text' => 'orden de salida',
-                            'url'  => '#',
+                            'text' => 'procdutos',
+                            'route'  => 'productos.index',
                         ], 
                     ],
             
@@ -411,7 +411,7 @@ return [
                         ],
                         [
                             'text' => 'registro',
-                            'url'  => '#',   
+                            'route'  => 'detalleingresos.index',    
                         ],
                         [
                             'text' => 'proforma',
@@ -433,36 +433,25 @@ return [
                         ],
                     ]
                 ],
-                [
-                    'text'    => 'REGISTRO',
-                    'url'  => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'registrar usuario',
-                            'route'     => 'register',
-                        ],
-                    ],
-            
-                ],
             ],
         ],
-        ['header' => 'labels'],
+        // ['header' => 'labels'],
 
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        //  [
+        //      'text'       => 'important',
+        //      'icon_color' => 'red',
+        //      'url'        => '#',
+        //  ],
+        //  [
+        //      'text'       => 'warning',
+        //      'icon_color' => 'yellow',
+        //      'url'        => '#',
+        //  ],
+        //  [
+        //      'text'       => 'information',
+        //      'icon_color' => 'cyan',
+        //      'url'        => '#',
+        //  ],
     ],
 
     /*
