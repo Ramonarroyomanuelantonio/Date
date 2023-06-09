@@ -42,7 +42,7 @@ class productos extends Controller
             $destinationPath = 'IMG';
             $filename = time() . '-'.$file->getClientOriginalName();
             $uploadSuccess = $request->file('imagen')->move($destinationPath, $filename);
-            $producto->imagen = $destinationPath . $filename;
+            $producto->imagen =  $filename;
 
         }
         $producto->save();
